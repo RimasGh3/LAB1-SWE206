@@ -16,7 +16,7 @@ public class Sorter {
         }
         System.out.println();
 
-        insertionSort(numbers);
+        sort(numbers);
 
         System.out.println("Sorted array:");
         for (int num : numbers) {
@@ -57,6 +57,10 @@ public class Sorter {
 
             array[j + 1] = key;
         }
+    }
+
+    public static void sort(int[] array) {
+        insertionSort(array);
     }
 
 }
