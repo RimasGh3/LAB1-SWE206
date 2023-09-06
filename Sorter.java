@@ -8,7 +8,7 @@ public class Sorter {
         }
         System.out.println();
 
-        selection(numbers);
+        sort(numbers);
 
         System.out.println("Sorted array:");
         for (int num : numbers) {
@@ -33,5 +33,9 @@ public class Sorter {
             array[minIndex] = array[i];
             array[i] = temp;
         }
+    }
+
+    public static void sort(int[] array) {
+        selection(array);
     }
 }
