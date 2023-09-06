@@ -15,6 +15,14 @@ public class Sorter {
             System.out.print(num + " ");
         }
         System.out.println();
+
+        sort2(numbers);
+
+        System.out.println("Sorted array:");
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 
     public static void selection(int[] array) {
@@ -35,7 +43,28 @@ public class Sorter {
         }
     }
 
-    public static void sort(int[] array) {
+    public static void sort2(int[] array) {
         selection(array);
     }
+
+    public static void insertionSort(int[] array) {
+        int n = array.length;
+
+        for (int i = 1; i < n; i++) {
+            int key = array[i];
+            int j = i - 1;
+
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j--;
+            }
+
+            array[j + 1] = key;
+        }
+    }
+
+    public static void sort(int[] array) {
+        insertionSort(array);
+    }
+
 }
